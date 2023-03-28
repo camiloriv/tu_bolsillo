@@ -1,0 +1,1 @@
+Este documento es para una prueba de trabajo en equipo con Github y sus restricciones para hacer PullRequest
