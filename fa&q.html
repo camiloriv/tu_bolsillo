@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,300&family=Red+Hat+Text&display=swap" rel="stylesheet">
+    <title>About Us</title>
+    <style>
+        .container{
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(13, 45px);
+            margin: 50px 0px;
+        }
+        header{
+            background-color: #E8EEF6;
+            grid-column: 1/13;
+            grid-row: 1/2;
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid grey;
+        }
+        section{
+            grid-column: 3 / 11;
+            grid-row: 2/11;
+            border-radius: 20px;      
+            padding: 10px;
+            border: 1px solid grey;
+        }
+
+        footer{
+            background-color: #E8EEF6;
+            grid-column: 1 / 13;
+            grid-row: 13/15;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .logo{
+            background-color: aqua;
+            height: 45px;
+            width: 45px;
+            margin-left: 125px;
+        }
+        .logo-copyright{
+            background-color: aqua;
+            height: 65px;
+            width: 65px;
+            margin-left: 125px;
+        }
+        .div-nav{
+            display: flex;
+            margin-right: 125px;
+        }
+        .btn-nav{
+            margin: auto 20px;
+            text-decoration: none;
+            font-family: 'Red Hat Text', sans-serif;
+            padding: 5px;
+        }
+        .btn-nav:hover{
+            color: #F1523A;
+        }
+        .AQ{
+            margin: 50px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">LOGO</div>
+            <div class="div-nav">
+                <a class="btn-nav" href="index.html">Inicio</a>
+                <a class="btn-nav" href="aboutUs.html">Sobre nosotros</a>
+                <a class="btn-nav" href="fa&q.html">Preguntas frecuentes</a>
+                <a class="btn-nav" href="">Registrarse</a>
+                <a class="btn-nav" href="">Iniciar sesion</a>
+            </div>
+        </header>
+        <section>
+           <div class="AQ">
+            <p><b>¿Que podré hacer en "tu bolsillo"?</b></p>
+            <p>Con “tu Bolsillo” podras ingresar tus cobros y gastos para contrastarlos con tus ingresos.</p>
+           </div>
+           <div class="AQ">
+            <p><b>¿De que me sirve esto?</b></p>
+            <p>Para saber cuanto pague el mes pasado, saber en que puedo gastar a futuro, ahorrar si me sobra dinero, etc.</p>
+           </div>
+           <div class="AQ">
+            <p><b>¿Como funciona?</b></p>
+            <p>Registrando tus cuentas, quedando en el sistema para ser contrastados con tu sueldo y/o ingresos.</p>
+           </div>
+           <div class="AQ">
+            <p><b>¿Tendré que dar mis datos bancarios?</b></p>
+            <p>No, la informacion que se mostrará será solo la que tu ingreses a nuestra plataforma.</p>
+           </div>
+           <div class="AQ">
+            <p><b>¿”tu bolsillo” a que aplicacion se parece?</b></p>
+            <p>Ninguna.</p>
+           </div>
+
+        </section>
+        <footer>
+            <div class="logo-copyright">COPYRIGTH LOGO</div>
+            <div class="div-nav">
+                <a class="btn-nav" href="">Sugerencias y reclamos</a>
+                <a class="btn-nav" href="">Politicas de privacidad</a>
+                <a class="btn-nav" href="">Trabaja con nosotros</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
