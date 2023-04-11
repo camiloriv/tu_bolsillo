@@ -31,11 +31,12 @@
 
       section {
         grid-column: 3 / 11;
-        grid-row: 2/11;
+        grid-row: 2/13;
         border-radius: 20px;
         padding: 10px;
         border: 1px solid grey;
         display: flex;
+        
       }
 
       .form-container {
@@ -44,6 +45,7 @@
         background-color: #f1523a44;
         border-radius: 20px;
         padding: 20px;
+        height: 600px;
       }
 
       .inputs {
@@ -117,22 +119,10 @@
           <h2>SUGERENCIAS Y RECLAMOS</h2>
           <form action="">
             <label class="inputs" for="nombre">Nombre:</label><br />
-            <input
-              class="inputs"
-              type="text"
-              onkeypress="return soloLetras(event, id)"
-              id="nombre"
-              name="nombre"
-            /><br />
+            <input class="inputs" type="text" onkeypress="return soloLetras(event, id)" id="nombre" name="nombre"/><br />
             <span id="msjeErrornombre"></span><br />
             <label class="inputs" for="apellido">Apellido:</label><br />
-            <input
-              class="inputs"
-              type="text"
-              onkeypress="return soloLetras(event, id)"
-              id="apellido"
-              name="apellido"
-            /><br />
+            <input class="inputs" type="text" onkeypress="return soloLetras(event, id)" id="apellido" name="apellido"/><br />
             <span id="msjeErrorapellido"></span><br />
             <label class="inputs" for="rut">Rut:</label><br />
             <input class="inputs" type="text" id="rut" name="rut" /><br />
@@ -141,12 +131,8 @@
             <input class="inputs" type="number" id="phone" name="phone" /><br />
             <span id="msjeErrorPhone"></span><br />
             <label class="inputs" for="sugerencia">Sugerencia:</label><br />
-            <input
-              class="inputs"
-              type="text"
-              id="sugerencia"
-              name="sugerencia"
-            /><br />
+            <input class="inputs" type="text" id="sugerencia" name="sugerencia"/><br />
+            <span id="msjeErrorSugerencia"></span><br />
             <div class="btn-submit" onclick="">Enviar</div>
           </form>
         </div>
@@ -208,14 +194,15 @@
         }
       }
       const iPhone = document.getElementById("phone");
+      const mPhone = document.getElementById("msjeErrorPhone")
       iPhone.addEventListener("blur", (e) => {
         if (iPhone.value.length == 0) {
           iPhone.removeAttribute("style", "border");
+          mPhone.innerHTML = ""
         } else if (iPhone.value.length == 9) {
           iPhone.setAttribute("style", "border:5px solid green");
         } else {
-          document.getElementById("msjeErrorPhone").innerHTML =
-            "Revisa nuevamente el numero";
+          mPhone.innerHTML ="Revisa nuevamente el numero";
           iPhone.setAttribute("style", "border:5px solid red;");
         }
     });
@@ -240,7 +227,6 @@
           },
         };
 
-
         const iRut = document.getElementById("rut");
         const mRut = document.getElementById("msjeErrorRut");
 
@@ -257,6 +243,21 @@
             mRut.innerHTML = ""
         }
 });
+
+      const iText = document.getElementById("sugerencia");
+      const mText = document.getElementById("msjeErrorSugerencia");
+      iText.addEventListener("blur", (e) => {
+        if (iText.value.length == 0) {
+          iText.removeAttribute("style", "border");
+          mText.innerHTML = "";
+        } else if (iText.value.length < 10){
+          iText.setAttribute("style", "border:5px solid red;");
+          mText.innerHTML = "El texto debe ser mas largo"
+        }  else {
+          iText.setAttribute("style", "border:5px solid green;");
+          mText.innerHTML = "";
+        }
+      });
 
     </script>
   </body>
