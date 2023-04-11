@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,300&family=Red+Hat+Text&display=swap"
+      rel="stylesheet"
+    />
+    <title>About Us</title>
+    <style>
+      .container {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(13, 45px);
+        margin: 50px 0px;
+      }
+
+      header {
+        background-color: #e8eef6;
+        grid-column: 1/13;
+        grid-row: 1/2;
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid grey;
+      }
+
+      section {
+        grid-column: 3 / 11;
+        grid-row: 2/11;
+        border-radius: 20px;
+        padding: 10px;
+        border: 1px solid grey;
+        display: flex;
+      }
+
+      .form-container {
+        text-align: center;
+        margin: 0px auto;
+        background-color: #f1523a44;
+        border-radius: 20px;
+        padding: 20px;
+      }
+
+      .inputs {
+        margin: 15px 0px;
+        border-radius: 20px;
+        padding: 5px;
+      }
+
+      .btn-submit {
+        background-color: #f1523a;
+        padding: 5px;
+        border-radius: 20px;
+        width: 80px;
+        margin: 0px auto;
+      }
+
+      footer {
+        background-color: #e8eef6;
+        grid-column: 1 / 13;
+        grid-row: 13/15;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .logo {
+        background-color: aqua;
+        height: 45px;
+        width: 45px;
+        margin-left: 125px;
+      }
+
+      .logo-copyright {
+        background-color: aqua;
+        height: 65px;
+        width: 65px;
+        margin-left: 125px;
+      }
+
+      .div-nav {
+        display: flex;
+        margin-right: 125px;
+      }
+
+      .btn-nav {
+        margin: auto 20px;
+        text-decoration: none;
+        font-family: "Red Hat Text", sans-serif;
+        padding: 5px;
+      }
+
+      .btn-nav:hover {
+        color: #f1523a;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo">LOGO</div>
+        <div class="div-nav">
+          <a class="btn-nav" href="index.html">Inicio</a>
+          <a class="btn-nav" href="aboutUs.html">Sobre nosotros</a>
+          <a class="btn-nav" href="fa&q.html">Preguntas frecuentes</a>
+          <a class="btn-nav" href="">Registrarse</a>
+          <a class="btn-nav" href="">Iniciar sesion</a>
+        </div>
+      </header>
+      <section>
+        <div class="form-container">
+          <h2>SUGERENCIAS Y RECLAMOS</h2>
+          <form action="">
+            <label class="inputs" for="nombre">Nombre:</label><br />
+            <input
+              class="inputs"
+              type="text"
+              onkeypress="return soloLetras(event, id)"
+              id="nombre"
+              name="nombre"
+            /><br />
+            <span id="msjeErrornombre"></span><br />
+            <label class="inputs" for="apellido">Apellido:</label><br />
+            <input
+              class="inputs"
+              type="text"
+              onkeypress="return soloLetras(event, id)"
+              id="apellido"
+              name="apellido"
+            /><br />
+            <span id="msjeErrorapellido"></span><br />
+            <label class="inputs" for="rut">Rut:</label><br />
+            <input class="inputs" type="text" id="rut" name="rut" /><br />
+            <span id="msjeErrorRut"></span><br />
+            <label class="inputs" for="phone">Telefono:</label><br />
+            <input class="inputs" type="number" id="phone" name="phone" /><br />
+            <span id="msjeErrorPhone"></span><br />
+            <label class="inputs" for="sugerencia">Sugerencia:</label><br />
+            <input
+              class="inputs"
+              type="text"
+              id="sugerencia"
+              name="sugerencia"
+            /><br />
+            <div class="btn-submit" onclick="">Enviar</div>
+          </form>
+        </div>
+      </section>
+      <footer>
+        <div class="logo-copyright">COPYRIGTH LOGO</div>
+        <div class="div-nav">
+          <a class="btn-nav" href="">Sugerencias y reclamos</a>
+          <a class="btn-nav" href="">Politicas de privacidad</a>
+          <a class="btn-nav" href="">Trabaja con nosotros</a>
+        </div>
+      </footer>
+    </div>
+    <script source="rut.min.js"></script>
+    <script>
+      const iNombre = document.getElementById("nombre");
+      const mNombre = document.getElementById("msjeErrornombre");
+      iNombre.addEventListener("blur", (e) => {
+        if (iNombre.value.length == 0) {
+          iNombre.removeAttribute("style", "border");
+          mNombre.innerHTML = "";
+        }
+      });
+
+      const iApellido = document.getElementById("apellido");
+      const mApellido = document.getElementById("msjeErrorapellido");
+      iApellido.addEventListener("blur", (e) => {
+        if (iApellido.value.length == 0) {
+          iApellido.removeAttribute("style", "border");
+          mApellido.innerHTML = "";
+        }
+      });
+
+      function soloLetras(e, id) {
+        let key = e.keyCode || e.which,
+          tecla = String.fromCharCode(key).toLowerCase(),
+          letras = " áéíóúabcdefghijklmnñopqrstuvwxyz",
+          especiales = [8, 37, 39, 46],
+          tecla_especial = false;
+
+        for (let i in especiales) {
+          if (key == especiales[i]) {
+            tecla_especial = true;
+            break;
+          }
+        }
+        if (letras.indexOf(tecla) == -1 && !tecla_especial) {
+          document
+            .getElementById(id)
+            .setAttribute("style", "border:5px solid red;");
+          document.getElementById("msjeError" + id).innerHTML =
+            "Solo letras permitido";
+          return false;
+        } else {
+          document
+            .getElementById(id)
+            .setAttribute("style", "border:5px solid green");
+          document.getElementById("msjeError" + id).innerHTML = "";
+        }
+      }
+      const iPhone = document.getElementById("phone");
+      iPhone.addEventListener("blur", (e) => {
+        if (iPhone.value.length == 0) {
+          iPhone.removeAttribute("style", "border");
+        } else if (iPhone.value.length == 9) {
+          iPhone.setAttribute("style", "border:5px solid green");
+        } else {
+          document.getElementById("msjeErrorPhone").innerHTML =
+            "Revisa nuevamente el numero";
+          iPhone.setAttribute("style", "border:5px solid red;");
+        }
+    });
+        let Rut = {
+          // Valida el rut con su cadena completa "XXXXXXXX-X"
+          validaRut: function (rutCompleto) {
+            rutCompleto = rutCompleto.replaceAll(".", "");
+            if (!/^[0-9]+[-|‐]{1}[0-9kK]{1}$/.test(rutCompleto)) return false;
+            var tmp = rutCompleto.split("-");
+            var digv = tmp[1];
+            var rut = tmp[0];
+            if (digv == "K") digv = "k";
+
+            return Rut.dv(rut) == digv;
+          },
+          dv: function (T) {
+            var M = 0,
+              S = 1;
+            for (; T; T = Math.floor(T / 10))
+              S = (S + (T % 10) * (9 - (M++ % 6))) % 11;
+            return S ? S - 1 : "k";
+          },
+        };
+
+
+        const iRut = document.getElementById("rut");
+        const mRut = document.getElementById("msjeErrorRut");
+
+        iRut.addEventListener('blur', (e) => {
+        const rut = iRut.value;
+        if (rut.length == 0 ){
+            iRut.removeAttribute("style","border")
+        }
+        if( !Rut.validaRut(rut) ) {
+            iRut.setAttribute("style", "border:5px solid red;");
+            mRut.innerHTML = "Revisa el rut ingresado"
+        } else {
+            iRut.setAttribute("style", "border:5px solid green;");
+            mRut.innerHTML = ""
+        }
+});
+
+    </script>
+  </body>
+</html>
