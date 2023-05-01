@@ -1,15 +1,15 @@
 import { initializeApp } from "firebase/app";
-import{getFirestore} from '@firebase/firestore';
+import {getFirestore} from '@firebase/firestore'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAlYNkpG-64rE9QRDVHXu0eawx66ShOuf4",
-  authDomain: "tu-bolsillo-491cc.firebaseapp.com",
-  projectId: "tu-bolsillo-491cc",
-  storageBucket: "tu-bolsillo-491cc.appspot.com",
-  messagingSenderId: "502002511174",
-  appId: "1:502002511174:web:e91da6eed2ba69e7f98947",
-  measurementId: "G-LWM389XE5G"
+  apiKey: "AIzaSyBr5LUx8ZM-jzqR1suNXHEUYPj3zvD051A",
+  authDomain: "bolsillo-4b4ca.firebaseapp.com",
+  projectId: "bolsillo-4b4ca",
+  storageBucket: "bolsillo-4b4ca.appspot.com",
+  messagingSenderId: "969208742374",
+  appId: "1:969208742374:web:4300a04d74cc6f3f09d627"
 };
+
 
 const app = initializeApp(firebaseConfig);
 

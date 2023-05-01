@@ -1,17 +1,22 @@
 import './App.css';
-import ModalSugerencias from './components/modals/m_sugerencias';
-import Index from './components/views';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
+// importar nuestros componentes
+import { Show } from './components/views/Show';
+import {Edit} from './components/views/Edit';
+import {Create} from './components/views/Create';
+
+//importamos el Router
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Routes>
-      <Route path="/" element={<Index/>}/>
-        <Route path="/src/components/modals/m_sugerencias.js" element={<ModalSugerencias/>}/>
-      </Routes>
+        <Routes>
+          <Route path='/' element={ <Show /> }></Route>
+          <Route path='/create' element={ <Create /> }></Route>
+          <Route path='/edit/:id' element={ <Edit /> }></Route> 
+        </Routes>
       </BrowserRouter>
     </div>
   );
