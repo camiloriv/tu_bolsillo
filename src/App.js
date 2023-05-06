@@ -1,7 +1,6 @@
 import './App.css';
-import ModalSugerencias from './components/modals/m_sugerencias';
-import Index from './components/views';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Show from './components/views/Show';
 
 
 function App() {
@@ -9,8 +8,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <Routes>
-      <Route path="/" element={<Index/>}/>
-        <Route path="/src/components/modals/m_sugerencias.js" element={<ModalSugerencias/>}/>
+        <Route path="/show" element={Show}/>
       </Routes>
       </BrowserRouter>
     </div>
