@@ -22,6 +22,52 @@ a {
   font-weight: 500;
 }
 
+.btn-submit {
+  background-color: #3d7fe0;
+  padding: 8px 24px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+}
+
+.btn-volver {
+  padding: 4px 16px;
+  border-radius: 8px;
+  font-weight: 300;
+}
+
+.form-container {
+  margin: 80px auto;
+  width: 25%;
+  min-height: 350px;
+  text-align: center;
+  flex-wrap: wrap;
+  padding: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 52px rgba(0, 0, 0, 0.2);
+}
+.form-container img {
+  width: 20%;
+}
+.form-container h1 {
+  font-weight: 700;
+  padding: 10px;
+}
+.form-container form {
+  width: 70%;
+  text-align: center;
+  margin: 0px auto;
+}
+.form-container form input {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 3px;
+  margin: 10px auto;
+}
+
 .nav-container {
   position: fixed;
   top: 0;
@@ -33,6 +79,7 @@ a {
   justify-content: space-around;
   flex-wrap: wrap;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.95);
 }
 .nav-container .logo {
   width: 15%;
@@ -41,6 +88,9 @@ a {
 .nav-container .logo img {
   width: 100%;
   max-width: 150px;
+}
+.nav-container a:hover {
+  color: #3d7fe0;
 }
 .nav-container .menu-container {
   width: 60%;
@@ -116,4 +166,30 @@ header .header-img-container img {
     width: 49%;
     max-width: 500px;
   }
+}
+
+.perfil-container {
+  margin: 0px 25px;
+  text-align: center;
+  border: 1px solid black;
+  width: 30%;
+  min-height: 400px;
+}
+
+.faq-container {
+  width: 80%;
+  margin-top: 120px;
+}
+.faq-container .aq-container {
+  padding: 5px;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+.faq-container .aq-container:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.faq-container p {
+  padding: 2px;
+  margin-left: 10px;
 }/*# sourceMappingURL=main.css.map */

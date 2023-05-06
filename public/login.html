@@ -4,20 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ingreso</title>
+    <link rel="stylesheet" type="text/css" href="../src/sass/main.css">
+    <title>Inicio de sesión</title>
 </head>
 <body>
-    <h1>Ingreso</h1>
-
-    <form method="post" action="login.html">
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" />
-
-        <label for="contrasena">Contraseña</label>
-        <input type="password" name="password" id="password" />
-
-        <button type="submit">Ingresar</button>
-    </form>
+    <section class="form-container">
+        <img src="../src/img/logo.jpg" alt="">
+        <h1>Iniciar sesión</h1>
+        <br>
+        <form method="post" action="login.html">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" />
+            <br>
+            <label for="contrasena">Contraseña</label>
+            <input type="password" name="password" id="password" />
+            <br>
+            <button class="btn-submit" type="submit">Ingresar</button>
+            <button class="btn-volver"><a href="/public/index.html"> Volver </a></button>
+        </form>
+    </section>
 
     <script>
         const formulario = document.querySelector("form");

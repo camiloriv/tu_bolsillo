@@ -7,105 +7,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,300&family=Red+Hat+Text&display=swap" rel="stylesheet">
-    <title>About Us</title>
-    <style>
-        .container{
-            display: grid;
-            gap: 20px;
-            grid-template-columns: repeat(12, 1fr);
-            grid-template-rows: repeat(13, 45px);
-            margin: 50px 0px;
-        }
-        header{
-            background-color: #E8EEF6;
-            grid-column: 1/13;
-            grid-row: 1/2;
-            display: flex;
-            justify-content: space-between;
-            border: 1px solid grey;
-        }
-        section{
-            grid-column: 3 / 11;
-            grid-row: 2/11;
-            border-radius: 20px;      
-            padding: 50px;
-            display: flex;
-            justify-content: space-between;
-        }
-        .tarjeta{
-            border-radius: 20px;
-            border: 1px solid grey;
-            width: 350px;
-            height: 450px;
-            padding: 20px;
-            box-shadow: 0px 0px 20px black;  
-        }
-        footer{
-            background-color: #E8EEF6;
-            grid-column: 1 / 13;
-            grid-row: 13/15;
-            display: flex;
-            justify-content: space-between;
-        }
-        .foto{
-            width: 100px;
-            height: 100px;
-            border: solid 1px grey;
-            margin: 0px auto;
-        }
-        .logo{
-            background-color: aqua;
-            height: 45px;
-            width: 45px;
-            margin-left: 125px;
-        }
-        .logo-copyright{
-            background-color: aqua;
-            height: 65px;
-            width: 65px;
-            margin-left: 125px;
-        }
-        .div-nav{
-            display: flex;
-            margin-right: 125px;
-        }
-        .btn-nav{
-            margin: auto 20px;
-            text-decoration: none;
-            font-family: 'Red Hat Text', sans-serif;
-            padding: 5px;
-        }
-        .btn-nav:hover{
-            color: #F1523A;
-        }
-    </style>
+<link rel="stylesheet" type="text/css" href="../src/sass/main.css">    
+<title>Sobre nosotros</title>
+ 
+        
 </head>
 <body>
     <div class="container">
-        <header>
-            <div class="logo">LOGO</div>
-            <div class="div-nav">
+        <nav class="nav-container">
+            <div class="logo">
+                <img src="../src/img/logo.jpg" alt="">
+            </div>
+            <div class="menu-container">
                 <a class="btn-nav" href="index.html">Inicio</a>
                 <a class="btn-nav" href="aboutUs.html">Sobre nosotros</a>
                 <a class="btn-nav" href="fa&q.html">Preguntas frecuentes</a>
-                <a class="btn-nav" href="">Registrarse</a>
-                <a class="btn-nav" href="">Iniciar sesion</a>
+                <a class="btn-nav" href="registro.html">Registrarse</a>
+                <a class="btn-nav btn-login" href="login.html">Iniciar sesion</a>
+            </div>
+        </nav>
+
+        <header class="main-container">
+            <div class="container-50 perfil-container">
+            <h1>Camilo Rivera</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur sint cumque sapiente itaque libero voluptate laudantium, hic aspernatur accusantium dolorem enim placeat vel odit possimus. Odit rem maxime hic tenetur?</p>
+            </div>
+            <div class="container-50 perfil-container">
+            <h1>Luis Pino</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum nobis doloremque nemo dolor, rem vero, optio dolores placeat corrupti, quam quis recusandae non excepturi! Illo animi dicta id aliquid iusto?</p>
             </div>
         </header>
-        <section>
-            <div class="tarjeta">
-                <div class="foto"></div>
-                <h4>Camilo Rivera</h4>
-                <p>Rol: Product Owner - Development</p>
-                <p>Entusiasta por encontrar soluciones, en esta oportunidad decidí optimizar mi orden financiero a travez de esta aplicacion web</p>
-            </div>
-            <div class="tarjeta">
-                <div class="foto"></div>
-                <h4>Luis Pino</h4>
-                <p>Rol: Development</p>
-                <p>Entusiasta por encontrar soluciones, en esta oportunidad decidí optimizar mi orden financiero a travez de esta aplicacion web</p>
-            </div>
-        </section>
         <footer>
             <div class="logo-copyright">COPYRIGTH LOGO</div>
             <div class="div-nav">
