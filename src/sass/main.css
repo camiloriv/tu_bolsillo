@@ -192,4 +192,38 @@ header .header-img-container img {
 .faq-container p {
   padding: 2px;
   margin-left: 10px;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal-container .modal {
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  width: 400px;
+  text-align: center;
+}
+.modal-container button {
+  color: #3d7fe0;
+  border: 1px solid #3d7fe0;
+  border-radius: 12px;
+  margin-top: 20px;
+  background-color: white;
+  padding: 8px 24px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.modal-container button:hover {
+  background-color: #3d7fe0;
+  color: white;
 }/*# sourceMappingURL=main.css.map */

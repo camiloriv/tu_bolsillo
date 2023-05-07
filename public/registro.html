@@ -25,15 +25,31 @@
         </form>
     </section>
 
-    <script>
+    <div id="modal-container" class="modal-container">
+        <div class="modal">
+            <div class="header">
+                Se a generado el usuario
+            </div>
+            <div id="modal-body" class="body">
+
+            </div>
+            <div class="footer">
+                <button id="modal-btn" class="modal-btn">
+                    OK
+                </button>
+            </div>
+        </div>
+    </div>
+
+   
+   <script>
         const form = document.querySelector("form");
         form.addEventListener("submit", async (eventoSubmit) => { 
             eventoSubmit.preventDefault();
-            // currentTarget: es lo mismo que la constante "form" que está arriba
-            // representa el elemento HTML que disparó el Evento 
+            
             const formElement   = eventoSubmit.currentTarget; 
             const formData      = new FormData( formElement );
-            // con formData.get( nombreCampoForm )
+            
             const email         = formData.get("email");
             const password    = formData.get("password");
             const newUser = {
@@ -52,24 +68,41 @@
             };
             try {
                 const response = await fetch(url, fetchConfig);
+                
+                const modalContainer = document.getElementById("modal-container")
+                const modalBody = document.getElementById("modal-body")
+                const modalBtn = document.getElementById("modal-btn")
+
+                modalContainer.style.display = "flex"
+
+                modalBtn.addEventListener("click", () => {
+                    modalContainer.style.display = "none"
+                })
+
                 console.log(response)
-                // si la respuesta no es OK 
                 if( !response.ok ) {
-                   // gestionar error o mensajes recibidos 
-                   console.error("La respuesta no está OK");
+
+                    console.error("La respuesta no está OK");
                    return;
                 } 
 
-                // en caso de exito 
                 const objetoJson    = await response.json(); 
                 console.dir( objetoJson);
 
             } catch (error) {
-                // gestion errores 
+
                 console.error( error.code );
                 console.error( error.message );
             }
-        });        
+
+        });
+        
+        
+
+
+
+
+
     </script>
 </body>
 </html>
