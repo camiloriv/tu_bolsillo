@@ -1,17 +1,18 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Show from './components/views/Show';
+import Index from '../src/components/views/index'
 import './sass/main.css';
-import Index from './components/views/index';
+
 
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Routes>
-        <Route path="/" element={Index}/>
-        <Route path="/show" element={Show}/>
-      </Routes>
+        <Routes>
+          <Route path='/' element={<Index/>}/>
+          <Route path="/show" element={<Show/>}/>
+        </Routes>
       </BrowserRouter>
     </div>
   );

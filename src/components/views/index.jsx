@@ -1,14 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-class Index extends Component {
-    render ()   {
-
+const Index = () => {
         return(
             <div className="main-container">
                     <nav className="nav-container">
                         <div className="logo">
-                            <img src={require("../../img/header-img.jpg")} alt=""/>
+                            <img src={require("../../img/logo.jpg")} alt=""/>
                         </div>
                         <div className="menu-container">
                             <Link className="btn-nav"  to="Index">Sugerencias y reclamosreclamosreclamos</Link>
@@ -29,7 +27,7 @@ class Index extends Component {
                             <img src="https://static.fintonic.com/ES/public/src/images/ios-store-v2.svg?v=1678966294315" alt="foto de applestore"/>
                         </div>
                         <div className="container-50 header-img-container">
-                            <img src="../src/img/header-img.jpg" alt="imagen de celular"/>
+                            <img src={require("../../img/header-img.jpg")} alt="imagen de celular"/>
                         </div>
                     </header>
                     
@@ -44,5 +42,5 @@ class Index extends Component {
                 </div>
         );
     }
-}
+
 export default Index;
