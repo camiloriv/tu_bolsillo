@@ -2,7 +2,7 @@
 Proyecto capacitación AIEP para SMU
 
 Mockup en desarrollo:
-https://www.figma.com/file/jpQuffyzQeKbmL6nL7O3QH/Untitled?node-id=0-1&t=cf7C6vfDm14lclW9-0
+
 
 Tu Bolsillo consta de una interfaz gráfica de usuario que permite 
 al usuario ingresar información sobre sus gastos e ingresos, como 
